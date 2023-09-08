@@ -1,0 +1,104 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+html,body{
+    display: grid;
+    height: 100%;
+    place-items: center;
+    align-items: center;
+    background: black;
+   
+    /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqINfGyvcLr-yJuB5uVzgCzFXQv-0wBLAo7w&usqp=CAU");
+    /* margin: 50%; */
+    /* background-repeat: no-repeat;
+    object-fit: cover;
+    width: 100%;
+    height: 100%; */ */
+}
+/* #align1{
+    margin:0px 0px 13px 19px;
+}
+
+#align2{
+    margin: 0px 0px 42px 19px; */
+}
+.container{
+    width: 400px;
+    background: #111;
+    border: 1px solid rgb(94, 91, 91);
+    padding: 20px 30px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.container .star-widget input{
+    display: none;
+}
+.star-widget label{
+    font-size: 50px;
+    color: #444;
+    padding: 10px;
+    float: right;
+    transition: all 0.2s ease;
+}
+input:not(:checked)~label:hover,
+input:not(:checked)~label:hover~label{
+    color:#fd4;
+    cursor: pointer;
+}
+input#rate-5:checked~label{
+    color:rgb(252, 240, 149);
+    text-shadow: 0 0 50px #952;
+    cursor: pointer;
+    text-shadow: rgb(5, 131, 32);
+}
+#rate-1:checked~form header:before{
+    content:"I Din't like it";
+}
+#rate-2:checked~form header:before{
+    content:"It was somewhat okay ";
+}
+#rate-3:checked~form header:before{
+    content:"Good! I liked it"
+}
+#rate-4:checked~form header:before{
+    content:"Exellent Experience!"
+}
+#rate-5:checked~form header:before{
+    content:"OUTSTANDING!!"
+    
+}
+form header{
+    margin: 45px 0px 22px 7px;
+    color:#fd4;
+    font-size: 25px;
+    transition: all 0.2s ease;
+    
+}
+form .textarea textarea{
+   background: rgb(54, 51, 51);
+   color: white;
+   font-size: 17px;
+   padding: 27px;
+   border: 1px solid #333;
+   resize:none;
+}
+form .btn button{
+   
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+    padding: 7px;
+    background: rgb(54, 52, 52);
+    cursor: pointer;
+}
+form .btn button:hover{
+    color: aliceblue;
+    background: rgb(107, 105, 105);
+    cursor: pointer;;
+}

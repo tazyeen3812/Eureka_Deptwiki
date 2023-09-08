@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eureka</title>
+</head>
+
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Kalam:wght@700&display=swap" rel="stylesheet">
+<style>
+    
+/* body{ */
+    /* background-image: rgba(0,0,0,0.5) url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw0NDQ0HBxANBwcHDQ0HBwcNDQ8IDQcNFREWFyARFRUYHSggGCYxGxUVLTEtJSktLi4uFyIzODM4Nyg5MCsBCgoKDQ0NDw0NFSsZFhk3Ky41KysrNysrKystLTcrLTcrLS0tLSstNysrKzcrKysrKysrLSsrKy0rKystLSstK//AABEIAMIBAwMBIgACEQEDEQH/xAAaAAACAwEBAAAAAAAAAAAAAAADBAABAgUG/8QANBAAAwEAAgIBAgQDBAsAAAAAAAECAxESBBMhBTEiMkFRBnKxcZGh8RUzQ1JhY4GywdHh/8QAGQEBAQEBAQEAAAAAAAAAAAAAAAECAwUE/8QAGxEBAQEBAQEBAQAAAAAAAAAAAAEREgIhMSL/2gAMAwEAAhEDEQA/APNJG0iJG5R6b50SCJFJG0giJGki0jaQQLJfiv8AmX/ZIZIB43Z6bq0lM1Hr4fPK6/5DaRIVjqaUm1JakqMKTSk2kWpCMdSdQnUvqALgvqE6l9QEPp9VUN6T66Wms9OVXH43+w11BfTW6z73PqdXo1PKfK7v5GupJ+Qv6D1J1C9SupQLqU5CuSmgAuSnIZoy5AC0ZpfDDOQPk8qLcfnUU5/t4JVCyX4I/ln+hbRfjp+uO/CrpPKXyl8GmhFCaMNBmjDRVAaMtBWjDQAuCGuCBRJQSUVKCSgiSgkokyEmQikjaRak2pCFPDdO9+6SidOudJ/NcSl/6/vHFIPxpSvafu/Yra/bmJ/+jKkkKwkWpCKTSkqBqTSkIpNKQgXUvgL1J1AFwXwF6iv1OlOGlU+ic+vt2eXHb4/Mvt9/uS3BjwUujif9nprHz+n43/44D8HE/hvfN674ZN8NLSJemm3aU/zfPwvv+56HqTzdkX1MoPBOAvUnU0gLky5D9TLkADky0MOTLkKA0C2T608+Hal9E/hN8fqNOQeq4mqfwpTbf7fBAl4fLyzd/n6Sq/t4CNGvGz4yzX34ifn9/g05E/FAaMUhhyDqSqXaMUg1SDpAB4Ib4LCiSgsoqUFlBlJkLMkmQsyBSk04bTU/FNNS/wBmEUm1JB5bxvIvw96y8yr8pdYnW021y+PxcPl/C5+D0+FTcrXJrTO1zNp8qgfhfwjHlaaeX5m8/T/p83x0iVr5G76ptRP2Xy/u/j5PQx9N8PGVh9MwXi4R8u6p7beTX+9dP+i+EcfHqy2Vv1JfrjqDazZ2PRP6JIy8UdOmMcroWoOhWBh4l1MJ9S+ow8jefj8/cuoVWfPwvkW+q/RvI8mJxweeOfL00q3SdtL4nhJ/r/Q9Blip+33DJGPV2Y1Pn14f6f8Awv5vj+RHkqvH0xXMbStNFVQ1+icfvx+v6HcvFr4pcHc4MXmn8P5J5/n4vr79cToV1H9fG/WQPqZvWCrkroOrI3OI1XOebMuDrzijaxX7E6XHCcnB/iD6nEJ+Hk376/PcP/UNNfD/AMT3T8fN/nidF+sPlK1+z4+Ti/Wv4I8PeX5H0O/9Geaubr6X5Fu/H3f/AC9X8y/5vj/ivuY9+7nxrz5cL+HZt4PTW/bOlt4/Pf1yklx/emdJyT6d4vqwzwa6XEr2z+1v5fP/AFDOTp5/Il/S1SCqRqpBVJpC1SCpDNIFSABwUbaIVR5QWZMwg8SRFzIaJKiQ0SQVMhssuzUr9STI/wCHlx+IloZxzUpTP2X+IVIuUbSObTHBXUJwX1AC4MvMY6mpguoWWAWchhQb6E0wupL4CuSuAB8FOQvBFIAKzBVgPKCnmNMc/wBRpQNVBjqXTAupOAvUrgih8GXIbgy0ByPN8fh9p+1fdfsJuTt+RHK4OXccPg3KlKVIGpHKkDcmkJ1IKpGrkDclCzks20QoPEh4kHCGIkiNRIeJMxIeJMqvOPk6OEiuUj2SM1YLKNpElBEjCscFqQnUvqANSEmTSkJMjRlSa6hFJOpAJyZcB+pOo0L9TSgN0J1GgXUjkL1J1AXqQTkbqQVSXQv1J1DOTPUATRloM5MNAK6I5/kR8nU0QlvJqJXPqQNyOXIC5NoTuQFyOXIvaNIWckCNFFB4QxEg85GIklG4kYiTESMZyZqiZSN5oBnI1nJirBZQWUVEhZkwqlJakIpNKRqhzIWZNTARQTRjqTqG6k6E1QupFIbqWoGgHUrqMdCug0A6k6huhOg0AcgqkacmKgahVyZcjDkw5LoA5B0hmpBVJUK6IU1Q/ohTWTUKRuQFyOXIC5Nxklci9ocuRfRGohVogRoo0hjORnOQecjWcmasbzkZzgxnI1nBztai4gZzkqID5yYtakbiQ0wXEBogxa1jCg2oCqAigmrgMwEUBZgIoJpgHQvoMdC+hNXC/QtQMdC+g0ws4K6DXrK6DTCvQnQa6Geg0wq4MVA44B1BdMJODLgbcGHBdTCdQCqR2oA3BZUwjpIrpJ0NJFrg3KzYQuRbSToaQK6SblZsIaSL6SPaSK6SbjNKNECOSGkNZwNZwZzkazklJWs4G84MZyNZycq3FxAxEEiQ8SYrcazgPEFZyHiTnWoqYCTBuZCTJmtMTASYNzISZMtB9C+gZSWpIAqC1AdSWpCl3BTgZcldQFuhXQYclOQhaoB1A3Ug6koTqDFQN1IOpNRkncAbkduQFyaiUhpAvcD9yAuTcZpDSBXSDo6SLaSdIxXN0gV0g6OkiuknSMUg4IMOSG2dHzYzmxHOhrOjNWQ9mxnNiOdDWdHKtw7DDQxSLDRZitw5DGIYlFho0Odah2WEmhNaG51MtHJoJNCa1NzqRTio0qFPaT2mcU52LVCntL9owNOiuws9SvaMNMuiuwt7SvaMDDoHVAXqYrUqCugdMG9Qb0NIJbAWyq0BXZqJWbYG2Xdgbs3GaxoxbRhdKFdKNxihaMV0YbShXSjrGLGGyjDohtnGM6Gc7OfFho0M2NR0s9BmNDlRqGjYxY1rrTqFnU5U7BZ2MXy1rqzsFnY5M7hZ3M3yuustja2OUtzS3JyvTrLY2tjkrc2tycnTq+8v3nL95fvJyvTqe8v3nL95fvJya6fvK95zfeV7xya6XuK9xzXuV7y8nTpPcw9jnvcw9xydOg9jD2Oe9zL3LynR+tgNbCVbg63NTymnK1BVqJ1sDrY1PKaavUX00AXsBvU1PLNomli2lmb0A3ZuRm1p0UC7FGkBnQJOgitAk6BT86hJ1OetAi0A6E6hJ2OctAi0Jg6M7BJ2OatDa1M4uuktjS2OctTS1GGuktjS3OYtTS2Jya6fvL95zfcT3E5XXT95fvOZ7ie4cmun7yvec73Fe4cmuj7yvec73E9w5NdB7mXuIPYy9S8pp57GXsIvUy9Rhp17GK2E3qYehcNN1sDrYVegN6FxDVagq1F3oYehQetAdaAK0MVoUG9hBb2FFCy0CLQQWhpaEXHQWptanPWhtagx0FqbWpzlqbWoR0VqbWpzlqbWoHRWppanOWppakwdBamlqc5amlqMHQ9pPaIe0ntGI6HtJ7RD2k9wwP8AtJ7RD3E9owPe0ntEPaT2jA97SnqIvUp7DA69TL1EnsZeoxTr1MPUTepl6lDb1MPUUeph6gNvUw9RV6mHoFNPUG9BZ6GHoDDXsIJ+wgXAUbRCEVpG0QhUaRpEIEbRtEIEaLKIEaTLRCAXyWQgEJyWQIhRCAQrkhAqMy2QgFFMhAMsyyECsMyyECsMyyECsMzRCBWSiEIP/9k="); */
+    /* background: rgba(0,0,0,0.4) url(""); */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    /* background-blend-mode: lighten; */
+
+   
+/* }
+
+*/
+
+body{
+    /* background:url("data:image/jpeg;base64,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"); */
+
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3feg0WPyzc_Ak-mGA-RJQ0gFD7SmtwX3y2Q&usqp=CAU');
+
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+
+}
+.box{
+    /* border: 1px solid black; */
+/* background: rgb(4, 41, 37); */
+color: rgb(5, 37, 34); 
+padding: 217px 652px 29px 642px;
+margin:-230px -23px 8px -23px;
+background-image: url('/eureka logo.png');
+background-repeat: no-repeat;
+background-size: 330px;
+background-position:center ;
+position: absolute;
+
+/* z-index: -1; */
+
+
+}
+#upperbox{
+    /* background-image: url("https://cdn.pixabay.com/photo/2016/02/06/09/56/science-1182713_960_720.jpg"); */
+    /* border: 1px solid white; */
+    /* background-image: url('https://media.istockphoto.com/photos/green-rainforest-fern-dew-closeup-picture-id452678795?k=20&m=452678795&s=170667a&w=0&h=YBv4_1SdXFHcj0Zgshio6fydFGTdlZI-mQ5BkTHCFG4='); */
+   
+    /* background: url('https://cdn.pixabay.com/photo/2019/05/22/05/57/flower-4220748_960_720.jpg'); */
+    background: url('http://www.hdwallpaperspulse.com/wp-content/uploads/2012/10/dark-landscapes-wallpapers.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.9;
+    padding:272px 515px 25px 547px;
+margin:27px -14px -5px -25px;
+/* position: absolute; */
+
+}
+.scroll{
+    font-size: large;
+    font-family: 'Kalam', cursive;
+transition-duration: 0.1s;
+}
+
+ .container1, .container2{
+    display: flex;
+    
+}
+.container3{
+    display: flex;
+    justify-content: center;
+}
+.b1,.b2,.b3,.b4,.b5,.b6,.b7{
+    border: 2px solid black;
+    border-radius:9px ;
+    box-shadow: 0px 0px 20px 5px grey;
+
+}
+.b1:hover{
+    box-shadow: 0px 0px 15px 10px rgb(88, 86, 86);
+
+}
+.b2:hover{
+    box-shadow: 0px 0px 15px 10px rgb(88, 86, 86);
+
+}
+.b3:hover{
+    box-shadow: 0px 0px 15px 10px rgb(88, 86, 86);
+
+}
+.b4:hover{
+    box-shadow: 0px 0px 15px 10px rgb(88, 86, 86);
+
+}
+.b5:hover{
+    box-shadow: 0px 0px 15px 10px rgb(88, 86, 86);
+
+}
+.b6:hover{
+    box-shadow: 0px 0px 15px 10px rgb(88, 86, 86);
+
+}
+.b7:hover{
+    box-shadow: 0px 0px 15px 10px rgb(88, 86, 86);
+
+}
+
+#b-1,#b-2,#b-3,#b-4,#b-5,#b-6,#b-7{
+    border:  1px solid rgb(14, 1, 1);
+    padding:271px 242px 20px 76px ;
+    margin: 19px 58px 55px 35px;
+}
+
+
+ .b1{
+    background: url('https://us.123rf.com/450wm/lonely11/lonely111505/lonely11150500007/39941679-e-book-stack-of-books.jpg?ver=6'); 
+    
+    background-repeat: no-repeat;
+    box-shadow: black;
+    /* background-position: center; */
+    background-size: 350px;
+
+    
+}
+#b-1{
+border: 1px solid rgb(10, 1, 1);
+width: 2%;
+height: 0%;
+
+}
+#b-6{
+border: 1px solid rgb(10, 1, 1);
+width: 2%;
+height: 0%;
+
+}
+
+
+.b2{
+    background: url('https://previews.123rf.com/images/tuahlensa/tuahlensa1704/tuahlensa170400589/76041486-jigsaw-puzzle-with-question-answer-conceptual-words-.jpg'); 
+    background-repeat: no-repeat;
+    box-shadow: black;
+    background-position: center;
+    background-size: 500px;
+    
+}
+.b3{
+    background: url('https://cdn.pixabay.com/photo/2016/11/30/13/28/university-student-1872810_960_720.jpg'); 
+    background-repeat: no-repeat;
+    box-shadow: black;
+    background-position: center;
+    background-size: 440px;
+    
+}
+
+.b4{
+    background: url('https://media.istockphoto.com/photos/quiz-picture-id933914672?k=20&m=933914672&s=612x612&w=0&h=wJmODzzL7fCYd2jw6y-r9VULPl4BLPpTPnt0R1JBCNg='); 
+
+    background-repeat: no-repeat;
+    box-shadow: black;
+    background-position: center;
+    background-size: 450px;
+    
+}
+
+.b5{
+    background: url('https://candid.technology/wp-content/uploads/2019/11/Computer-programming-languages-coding-329090sd-java-python-php.jpg'); 
+    background-repeat: no-repeat;
+    box-shadow: black;
+    background-position: center;
+    background-size: 550px;
+    
+}
+.b6{
+    background: url('https://thumbs.dreamstime.com/b/feedback-topic-mobile-tablet-many-light-bulbs-69117421.jpg'); 
+    background-repeat: no-repeat;
+    box-shadow: black;
+    background-position: center;
+    background-size: 490px; 
+
+}
+.b7{
+    background: url('https://cdn5.vectorstock.com/i/1000x1000/99/14/notifications-vector-28349914.jpg'); 
+    background-repeat: no-repeat;
+    box-shadow: black;
+    background-position: center;
+    background-size: 400px; 
+}
+ /* .one{
+    text-align: center;
+    border:1px thin black;
+    background-color: black;
+    color: white;
+    padding: 50px 100px 100px 50px ;
+} */
+.ll{
+   border: 1px thin black;
+   background: black;
+   padding: 50px 50px;
+}
+/* footer{
+    padding: 50px 50px ;
+} */
+.img{
+    border: 1px thin white;
+    padding: 10px 10px;
+/* background: url('https://e7.pngegg.com/pngimages/362/366/png-clipart-camera-illustration-logo-computer-icons-instagram-logo-miscellaneous-art.png'); */
+background-position: center;
+background-repeat: no-repeat;
+}
+.lastword{
+    color: white;
+
+}
+
+</style>
+<body><center>
+    <div id="upperbox"></div>
+    <div class="box"></div>
+        <!-- <img src="/eureka logo.png" alt="error" width="100px" height="100px"> -->
+        <div class="scroll"><marquee behavior="" direction="">
+           <p><h3>DO SOMETHING NOW; YOUR FUTURE SELF WILL THANK YOU FOR LATER &#128519
+              </h3></p> 
+        </marquee></div>
+        <div class="container1">
+            <a href="ebook.html">
+            <div class="b1" id="b-1"><label for="b-1"></label></div>
+            </a>
+            <a href="qb.html">
+            <div class="b2" id="b-2"><label for="b-2">
+                
+            </label></div></a>
+           <a href="studentProfile.html">
+            <div class="b3" id="b-3"><label for="b-3"></label></div>
+            </div></a>
+            
+            <div class="container2">
+                <a href="quiz.html">
+                <div class="b4" id="b-4"><label for="b-4"></label></div></a>
+            <a href="ctc.html">
+            <div class="b5" id="b-5"><label for="b-5"></label></div>
+        </a>
+            <a href="survey.html">
+            <div class="b6" id="b-6"><label for="b-6"></label></div>
+            </a>
+        </div>
+
+        <div class="container3">
+<a href="notify.html">
+            <div class="b7" id="b-7"><label for="b-7"></label></div></a>
+        </div>
+<!-- <footer class="one">
+        <div class="lastbox">
+            <span>
+Follow us <div class="img"></div>
+</span></div> -->
+    </footer>
+    <div class="ll">
+    <footer><h2 class="lastword">FOLLOW US ON</h2>
+        <!-- <h3>contact:</h3> -->
+        <a href="https://instagram.com/aimldeptdsce?utm_medium=copy_link">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Instagram-Icon.png/1200px-Instagram-Icon.png"
+                height="25px" width="25px"> </a>
+        <a href="https://www.linkedin.com/company/aimldeptdsce">
+            <img src="https://image.similarpng.com/very-thumbnail/2020/07/Linkedin-logo-on-transparent-Background-PNG-.png"
+                height="25px" width="25px"> </a>
+        <a href="">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/2560px-YouTube_full-color_icon_%282017%29.svg.png"
+                height="25px" width="25px"> </a>
+    </footer>
+</div>
+</body>
+</html>

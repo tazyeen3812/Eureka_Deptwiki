@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background: url('https://www.intellithought.com/wp-content/uploads/2018/07/background-grad-e1532460412723.jpg');
+            background-size: cover;
+            /* background-image:' https://virtualcustoms.net/attachment.php?attachmentid=52695&d=1330551210'; */
+        }
+
+        /* .bg-image{
+        background: url('https://virtualcustoms.net/attachment.php?attachmentid=52695&d=1330551210');
+        filter: blur(8px);-webkit-filter: blur(8px);
+         */
+
+        body:before {
+
+            opacity: 0.5;
+        }
+
+        .container{
+            width: 300px;
+            padding: 30px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(248, 243, 243, 0.4);
+            border-radius: 30px;
+            /* background-blend-mode: darken; */
+            text-align: center;
+            display: flex;
+        }
+
+        .h1 {
+            color: #000000;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .box input[type="text"],
+        .box input[type="password"] {
+            border: 0;
+            background: none;
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+            border: 3px solid #052f6e;
+            padding: 14px 10px;
+            width: 220px;
+            outline: none;
+            border-radius: 24px;
+            transition: 0.25px;
+            
+        }
+
+        .box input[type="text"]:focus,
+        .box input[type="password"]:focus {
+            width: 270px;
+            border-color: #000000;
+        }
+
+        .box input[type="submit"] {
+            border: 0;
+            background: none;
+            display: square;
+            margin: 20px auto;
+            text-align: center;
+            border: 3px solid #052f6e;
+            padding: 14px 10px;
+            outline: none;
+            border-radius: 25px;
+            transition: 0.25px;
+            cursor: pointer;
+        }
+
+        .box input[type="submit"]:hover {
+            background: rgb(171, 195, 247);
+        }
+
+        .h {
+            /* border: 2px solid red; */
+            /* margin-top: 70px; */
+            margin: 40px 10px 10px 10px;
+            color: rgb(242, 242, 247);
+            font-style: italic;
+            font-family: 'Satisfy', cursive;
+
+        }
+        
+        #submit{
+            padding: 5px 5px;
+            border-radius: 9px;
+
+        }
+
+        #submit:hover {
+            background: blue;
+        }
+
+        #name,#pwd1{
+            padding: 5px 5px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+        #s{
+        
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        <marquee behavior="" direction="">LOGIN TO EUREKA!</marquee>
+    </h1>
+  
+    <hr>
+    <!-- <form class="box" action="studentProfile.html" method="POST">
+
+        <h1><b> </b></h1>
+        <input type="text" name="" placeholder="Enter username" id="username">
+        <textarea name="text" id="" cols="30" rows="10"></textarea> -->
+        <!-- <input type="password" name="" placeholder="Enter password" id="password">
+        <a href="studentProfile.html"><input type="button" name="LOGIN" value="LOGIN" id="login" pattern=""> -->
+            <!-- <input type="submit" name="" value="Login" /> -->
+    <!-- </form></a>
+    <script>
+        function Login() {
+            var uname = document.getElementById("username").value;
+            var pwd = document.getElementById("password").value;
+        }
+        if (userame == '') {
+            alert("please enter user name.");
+        }
+        else if (pwd == '')
+        {
+            alert("enter the password");
+        }
+        else{
+            alert('Login Succesfull');
+            window.location="frontpage.html"
+        }
+
+
+
+    </script> --> -->
+    <div class="container">
+        <form action="/studentProfile.html">
+            <label for="usrname">
+            <input type="text" placeholder="Username" name="usrname" id="name"  required>
+        </label><label for="psw">
+            <input type="password" placeholder="Password" id="pwd1" name="psw" title="password should contain 6 charecters" required><br>
+            <input type="button" id="s" value="Submit" onclick="login()">
+        </form>
+    </div>
+    <script>
+        function login()
+        {
+            var uname = document.getElementById("name").value;
+            var pwd = document.getElementById("pwd1").value;
+           // var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            if(uname =='')
+            {
+                alert("please enter user name.");
+            }
+            else if(pwd=='')
+            {
+                alert("enter the password");
+            }
+            
+            else if(pwd.length < 6 || pwd.length > 6)
+            {
+                alert("Password min and max length is 6.");
+            }
+            else
+            {
+        alert('Login Successful ');
+      //Redirecting to other page or webste code or you can set your own html page.
+           window.location = "studentProfile.html";
+                }
+        }
+   </script>
+</body>
+
+</html>

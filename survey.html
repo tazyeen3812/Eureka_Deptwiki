@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>survey form</title>
+    <link rel="stylesheet" href="sf.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+<!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+<!-- <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet"> -->
+<!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+<!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+</head>
+<style>
+    *{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+html,body{
+    display: grid;
+    height: 100%;
+    place-items: center;
+    align-items: center;
+    background: black;
+   
+    /* background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqINfGyvcLr-yJuB5uVzgCzFXQv-0wBLAo7w&usqp=CAU");
+    /* margin: 50%; */
+    /* background-repeat: no-repeat;
+    object-fit: cover;
+    width: 100%;
+    height: 100%; */ */
+}
+/* #align1{
+    margin:0px 0px 13px 19px;
+}
+
+#align2{
+    margin: 0px 0px 42px 19px; */
+}
+.container{
+    width: 400px;
+    background: #111;
+    border: 1px solid rgb(94, 91, 91);
+    padding: 20px 30px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.container .star-widget input{
+    display: none;
+}
+.star-widget label{
+    font-size: 50px;
+    color: #444;
+    padding: 10px;
+    float: right;
+    transition: all 0.2s ease;
+}
+input:not(:checked)~label:hover,
+input:not(:checked)~label:hover~label{
+    color:#fd4;
+    cursor: pointer;
+}
+input#rate-5:checked~label{
+    color:rgb(252, 240, 149);
+    text-shadow: 0 0 50px #952;
+    cursor: pointer;
+    text-shadow: rgb(5, 131, 32);
+}
+#rate-1:checked~form header:before{
+    content:"I Din't like it";
+}
+#rate-2:checked~form header:before{
+    content:"It was somewhat okay ";
+}
+#rate-3:checked~form header:before{
+    content:"Good! I liked it"
+}
+#rate-4:checked~form header:before{
+    content:"Exellent Experience!"
+}
+#rate-5:checked~form header:before{
+    content:"OUTSTANDING!!"
+    
+}
+form header{
+    margin: 45px 0px 22px 7px;
+    color:#fd4;
+    font-size: 25px;
+    transition: all 0.2s ease;
+    
+}
+form .textarea textarea{
+   background: rgb(54, 51, 51);
+   color: white;
+   font-size: 17px;
+   padding: 27px;
+   border: 1px solid #333;
+   resize:none;
+}
+form .btn button{
+   
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+    padding: 7px;
+    background: rgb(54, 52, 52);
+    cursor: pointer;
+}
+form .btn button:hover{
+    color: aliceblue;
+    background: rgb(107, 105, 105);
+    cursor: pointer;;
+}
+    .container{
+        border: 1px solid gray; 
+        padding: 0px 20px 30px;
+        border-radius: 5px;
+    }
+    header{
+        font-size: 430%;
+       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+        color: rgb(180, 182, 185);
+        text-shadow: 0 0 30px white;
+        
+    }
+    img{
+        float: left;
+    }
+
+</style>
+<body>
+    <a href="m.html">
+        <img src="eureka logo.png" width="5%" height="5%"> 
+    </a>
+    <header><center>GIVE A FEEDBACK</center></header>
+    <!-- <h1 id="heading"> FEEDBACK</h1>
+    <form action="" >
+        <div class="firstblock">
+        <div id="align1">
+    <input type="text" id="name" placeholder="Name" >&nbsp &nbsp &nbsp 
+        
+    <input type="text" id="usn" placeholder="USN">
+    </div>
+     
+    <div id="align2">
+   <input type="email" id="email" placeholder="Email">&nbsp &nbsp &nbsp
+
+    <input type="text" id="Event" placeholder="Event Name">
+    </div>
+
+ -->
+
+
+    <div class="container">
+        <div class="star-widget">
+            <input type="radio" name="rate" id="rate-5">
+            <label for="rate-5" class="fa fa-star"></label>
+            <input type="radio" name="rate" id="rate-4">
+            <label for="rate-4" class="fa fa-star"></label>
+            <input type="radio" name="rate" id="rate-3">
+            <label for="rate-3" class="fa fa-star"></label>
+            <input type="radio" name="rate" id="rate-2">
+            <label for="rate-2" class="fa fa-star"></label>
+            <input type="radio" name="rate" id="rate-1">
+            <label for="rate-1"  class="fa fa-star"></label>
+            <form action="#"><center>
+                <header>  </header>
+                <div class="textarea">
+                    <textarea cols="30" id="feedback" placeholder="Share your Experience..."></textarea>
+                </div>
+                <div class="btn">
+                    <button type="submit" onclick="login()">POST</button>
+                </div></center>
+            </form>
+        </div>
+    </div>
+    <script>
+        function login()
+        {
+            var rate1 = document.getElementById("rate-5").value;
+            var rate2 = document.getElementById("rate-4").value;
+            var rate3 = document.getElementById("rate-3").value;
+            var rate4 = document.getElementById("rate-2").value;
+            var rate5 = document.getElementById("rate-1").value;
+            var feedback =document.getElementById("feedback").value;
+           // var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            if(feedback=='')
+            {
+                alert("please enter your feedback.");
+            }
+           
+            else
+            {
+        alert('Your feedback is recorded');
+      //Redirecting to other page or webste code or you can set your own html page.
+           
+                }
+        }
+        </script>
+</body>
+</html>

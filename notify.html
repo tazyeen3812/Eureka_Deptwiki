@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        NOTIFICATIONS
+    </title>
+    <style>
+        img {
+            float: left;
+        }
+    </style>
+</head>
+</title>
+
+<body>
+    <a href="m.html">
+        <img src="eureka logo.png" width="5%" height="5%">
+    </a>
+    <script>
+        function showNotification() {
+            const notification = new Notification("New message from eureka", {
+                body: "Here is your reminder"
+            });
+        }
+        // default, granted, denied
+        console.log(Notification.permission);
+
+        if (Notification.permission === "granted") {
+            showNotification();
+
+        } else if (Notification.permission !== "denied") {
+            Notification.requestPermission().then(permission => {
+                if (permission === "granted") {
+                    showNotification();
+                }
+            });
+        }
+        
+    </script>
+    <img src="timetable.jpeg.jpeg">
+</body>
+
+</html>
